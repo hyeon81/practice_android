@@ -27,6 +27,8 @@ import java.util.Locale;
 
 import android.speech.tts.TextToSpeech;
 
+import okhttp3.OkHttpClient;
+
 public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     File file;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
 
 //        tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
 //            @Override
@@ -138,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         return outFile;
     }
 
+    //tts 실행 관련
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
